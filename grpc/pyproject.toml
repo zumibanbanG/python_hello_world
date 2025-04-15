@@ -1,0 +1,24 @@
+[project]
+name = "grpc"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "zumibanbanG",email = "naozumi.suzuki@leverages.jp"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "grpcio (>=1.71.0,<2.0.0)",
+    "grpcio-tools (>=1.71.0,<2.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "grpc", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-grpc = "^0.8.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
